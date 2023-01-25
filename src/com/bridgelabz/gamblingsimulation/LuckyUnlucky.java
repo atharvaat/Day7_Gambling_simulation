@@ -1,15 +1,13 @@
 package com.bridgelabz.gamblingsimulation;
 import java.util.Random;
 
-public class GamblingSimulator {
+public class LuckyUnlucky {
 	static Random random = new Random();
 	
 	public int startGambling() {
 		int startingAmount = 100;
 		int bet_Per_Game = 1;
-		/*
-		 * checking condition with while loop
-		 */
+		
 		while (startingAmount != 150 || startingAmount != 50) {
 			int bet_result = random.nextInt(2);
 			if (bet_result == 0) {
@@ -26,8 +24,7 @@ public class GamblingSimulator {
 		return startingAmount;
 	}
 
-	
-	//  methods for checking luckiest Day and unlucky day
+	  //methods for checking luckiest Day and unluckiest day
 	 
 	public void playFor20Days() {
 		int total_Amount_Invested_In_20_Days = 2000;
@@ -54,6 +51,7 @@ public class GamblingSimulator {
 		} else
 			System.out.println("No profit No loss");
 	}
+
 
 	public static void main(String[] args) {
 		GamblingSimulator play = new GamblingSimulator();
